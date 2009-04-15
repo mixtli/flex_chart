@@ -1,6 +1,8 @@
 README.rdoc
-flex/FlexGraph.swf
-flex/FlexGraph.mxml
+Manifest
+init.rb
+public/swfs/FlexChart.swf
+flex/FlexChart.mxml
+tasks/flex_chart.rake
 lib/flex_chart.rb
 Rakefile
-Manifest

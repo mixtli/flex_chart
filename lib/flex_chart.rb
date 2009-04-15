@@ -23,13 +23,13 @@ module FlexChart
         xml.y_label(@y_label)
         xml.x_axis_type(@x_axis_type)
         xml.y_axis_type(@y_axis_type)
-        xml.color(fix_color @color)
-        xml.fill_color(fix_color @fill_color)
+        xml.color(fix_color(@color))
+        xml.fill_color(fix_color(@fill_color))
         xml.chart_type(self.class.to_s.split("::")[1])
         series.each do |item|
           xml.graph_item do
             xml.title(item.title)
-            xml.color(fix_color item.color)
+            xml.color(fix_color(item.color))
             xml.dataset do
               item.values.each do |data|
                 xml.data do

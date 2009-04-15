@@ -6,7 +6,7 @@ namespace :flex_chart do
   end
 
   desc 'Install swf'
-  task :install => :environment do
+  task :install_public => :environment do
     system("cp #{File.dirname(__FILE__)}/public/swfs/FlexChart.swf #{RAILS_ROOT}/public/swfs") 
   end
 end

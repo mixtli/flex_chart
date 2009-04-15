@@ -33,6 +33,7 @@
     private function initApp():void {
       trace("tracing on");
       data_url = Application.application.parameters.data_url;
+      trace("data_url = " + data_url);
       graphService.addEventListener("result", createGraph);
       graphService.send();
     }
