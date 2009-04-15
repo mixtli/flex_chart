@@ -14,8 +14,9 @@
     import mx.graphics.SolidColor;
     import mx.graphics.Stroke;
 
+
     [Bindable]
-    public var graph_id:String;
+    public var data_url:String;
 
     [Bindable]
     public var graph_title:String;
@@ -31,7 +32,7 @@
 
     private function initApp():void {
       trace("tracing on");
-      graph_id = Application.application.parameters.id;
+      data_url = Application.application.parameters.data_url;
       graphService.addEventListener("result", createGraph);
       graphService.send();
     }
@@ -130,7 +131,7 @@
 
   ]]></mx:Script>
 
-  <mx:HTTPService id="graphService" url="{url}" resultFormat="e4x"/>
+  <mx:HTTPService id="graphService" url="{data_url}" resultFormat="e4x"/>
   
   <mx:Panel width="100%" height="100%" id="chart_panel">
      <mx:Legend dataProvider="{chart}"/>
