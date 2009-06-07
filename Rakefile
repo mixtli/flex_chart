@@ -1,16 +1,23 @@
 # Rakefile
 require 'rubygems'
 require 'rake'
-require 'echoe'
+#require 'echoe'
 
-Echoe.new('flex_chart', '0.1.3') do |p|
-  p.description    = "Interface to Flex Charting Components"
-  p.url            = "http://github.com/mixtli/flex_chart"
-  p.author         = "Ron McClain"
-  p.email          = "mixtli@github.com"
-  p.ignore_pattern = ["tmp/*", "script/*"]
-  p.development_dependencies = []
-end
 
 Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each { |ext| load ext }
 
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "mixtli-flex_chart"
+    gemspec.summary = "Ruby interface to Flex Charting component"
+    gemspec.email = "mixtli@github.com"
+    gemspec.homepage = "http://github.com/mixtli/flex_chart"
+    gemspec.description = "Ruby interface to Flex Charting component"
+    gemspec.authors = ["Ron McClain"]
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
+end
+                                

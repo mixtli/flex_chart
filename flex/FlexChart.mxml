@@ -88,6 +88,10 @@
       }
       chart.setStyle("color", int(result.color));
       chart.setStyle("fill", int(result.fill_color));
+      chart.setStyle("paddingLeft", 0);
+      chart.setStyle("paddingRight", 0);
+      chart.setStyle("paddingTop", 0);
+      chart.setStyle("paddingBottom", 0);
       x_axis.title = x_label;
       chart.horizontalAxis = x_axis;
       y_axis.title = y_label;
